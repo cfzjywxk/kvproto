@@ -63,6 +63,7 @@ message CommitTsExpired {
 message TxnNotFound {
     uint64 start_ts = 1;
     bytes primary_key = 2;
+    bool locked = 3;
 }
 
 enum CommandPri {
