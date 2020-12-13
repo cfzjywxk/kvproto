@@ -350,6 +350,9 @@ message CheckTxnStatusResponse {
     // If the action is rollback, set the rollback reason.
     // If the minCommitTS is pushed, set the push flag.
     Action action = 5;
+	// The txn_status_certain means if the txn status could be
+	// cached in the TiDB side.
+    bool txn_status_certain = 6;
 }
 
 message CleanupRequest {
